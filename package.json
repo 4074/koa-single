@@ -1,0 +1,54 @@
+{
+  "name": "koa-single",
+  "version": "0.1.2",
+  "description": "SPA server for the koa app.",
+  "main": "build/index.js",
+  "files": [
+    "build"
+  ],
+  "peerDependencies": {
+    "koa": "^2"
+  },
+  "dependencies": {
+    "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.11.3",
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-uncley": "^0.1.6",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.4",
+    "koa": "^2.13.0",
+    "prettier": "^2.0.5",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-server": "ts-node test/index.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4074/koa-single.git"
+  },
+  "keywords": [
+    "koa",
+    "koa-single",
+    "nodejs",
+    "spa"
+  ],
+  "author": "win.ten.in@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4074/koa-single/issues"
+  },
+  "homepage": "https://github.com/4074/koa-single#readme"
+}
