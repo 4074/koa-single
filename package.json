@@ -1,8 +1,8 @@
 {
   "name": "koa-single",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "SPA server for the koa app.",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "files": [
     "src",
     "dist"
@@ -30,7 +30,7 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "tsc"
+    "build": "yarn test & tsc"
   },
   "repository": {
     "type": "git",
