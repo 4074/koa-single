@@ -1,7 +1,7 @@
 {
   "name": "koa-single",
-  "version": "0.1.4",
-  "description": "SPA server for the koa app.",
+  "version": "0.1.5",
+  "description": "A single page application middleware for koa app.",
   "main": "dist/index.js",
   "files": [
     "src",
