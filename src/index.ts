@@ -6,7 +6,7 @@ import koaStatic from 'koa-static'
 const indexPaths = ['/', '/index.html']
 let indexBuffer: Buffer
 
-export default (dir: string, test: RegExp | null = /^(?!\/api)/): (
+export default ({ dir, test = /^(?!\/api)/ }: { dir: string, test?: RegExp | null }): (
   (ctx: Koa.Context, next: () => Promise<any>) => void
 ) => {
   return async (ctx, next) => {

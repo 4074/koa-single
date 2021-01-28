@@ -5,7 +5,7 @@ import single from '../../src'
 export default (port: number): Promise<() => void> => {
   const app = new Koa()
 
-  app.use(single(path.join(__dirname, 'static')))
+  app.use(single({ dir: path.join(__dirname, 'static') }))
   app.use(async (ctx: Koa.Context) => {
     if (ctx.path === '/api/get') ctx.body = 'get'
     if (ctx.path === '/api/403') ctx.throw(403)
