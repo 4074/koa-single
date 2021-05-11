@@ -1,5 +1,10 @@
 # koa-single
 
+[![NPM version][npm-image]][npm-url]
+
+[npm-image]: https://img.shields.io/npm/v/koa-single
+[npm-url]: https://www.npmjs.com/package/koa-single
+
 A single page application middleware for koa app.
 
 **Install**
