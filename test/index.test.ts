@@ -11,8 +11,8 @@ beforeAll(async () => {
   close = await server(3040)
 })
 
-describe('Run single server', () => {
-  test('Get index.html', async () => {
+describe('spa server', () => {
+  it('should return index.html on /', async () => {
     const { data } = await axios.get(host)
     expect(data).toBe(
       fs.readFileSync(
@@ -21,7 +21,7 @@ describe('Run single server', () => {
     )
   })
 
-  test('Get test.txt', async () => {
+  test('should return test.txt on /test.txt', async () => {
     const { data } = await axios.get(`${host}/test.txt`)
     expect(data).toBe(
       fs.readFileSync(
@@ -30,12 +30,12 @@ describe('Run single server', () => {
     )
   })
 
-  test('Get /api/get', async () => {
+  test('should return `get` on /api/get', async () => {
     const { data } = await axios.get(`${host}/api/get`)
     expect(data).toBe('get')
   })
 
-  test('Get /api/some', async () => {
+  test('should throw 404 on /api/some', async () => {
     expect.assertions(1)
     try {
       await axios.get(`${host}/api/some`)
@@ -44,7 +44,7 @@ describe('Run single server', () => {
     }
   })
 
-  test('Get /api/403', async () => {
+  test('should throw 403 on /api/403', async () => {
     expect.assertions(1)
     try {
       await axios.get(`${host}/api/403`)
